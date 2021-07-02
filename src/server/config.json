@@ -1,0 +1,22 @@
+{
+  "title": "Micro Frontend",
+  "esModuleShims": "/node_modules/es-module-shims/dist/es-module-shims.min.js",
+  "entryFile": "micro-frontend-cart.js",
+  "minify": false,
+  "imports": {
+    "vue": "/node_modules/vue/dist/vue.esm-browser.prod.js",
+    "vue-router": "/node_modules/vue-router/dist/vue-router.esm-browser.js",
+    "@vue/reactivity": "/node_modules/@vue/reactivity/dist/reactivity.esm-browser.js",
+    "@vue/runtime-dom": "/node_modules/@vue/runtime-dom/dist/runtime-dom.esm-bundler.js",
+    "@vue/runtime-core": "/node_modules/@vue/runtime-core/dist/runtime-core.esm-bundler.js",
+    "@vue/shared":"/node_modules/@vue/shared/dist/shared.esm-bundler.js",
+    "@vue/devtools-api": "/node_modules/@vue/devtools-api/lib/esm/index.js",
+    "/node_modules/@vue/devtools-api/lib/esm/env": "/node_modules/@vue/devtools-api/lib/esm/env.js",
+    "/node_modules/@vue/devtools-api/lib/esm/const": "/node_modules/@vue/devtools-api/lib/esm/const.js",
+    "/node_modules/@vue/devtools-api/lib/esm/api": "/node_modules/@vue/devtools-api/lib/esm/api/api.js",
+    "redux": "/node_modules/@qoi/es-modules/redux.js",
+    "react": "/node_modules/@qoi/es-modules/react.js",
+    "react-dom": "/node_modules/@qoi/es-modules/react-dom.js",
+    "koala-store": "/www/koala-store.js"
+  }
+}
