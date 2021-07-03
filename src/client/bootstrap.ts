@@ -1,7 +1,7 @@
 import type { RouteRecordRaw } from 'vue-router'
 
 import { createStore, Reducer, AnyAction, Store, applyMiddleware } from 'redux'
-import { createComponent, addToStore, Action  } from '@bto-ui/shared'
+import { addToStore, Action, createRoute  } from '@bto-ui/shared'
 
 export interface Menu {
   text?: string
@@ -65,14 +65,7 @@ const service = (store: Store<BootstrapState, AnyAction>) =>
         }))
 
         const routes: RouteRecordRaw[] = packages?.routes?.map(pkg => {
-          const route: RouteRecordRaw = {
-            path: pkg.path,
-            component: async () =>  {
-              const component = await import(/* @vite-ignore */ pkg.component)
-              return createComponent(component.default ?? globalThis[pkg.global])
-            }
-          }
-          return route
+          return createRoute(pkg, globalThis[pkg.global])
         })
   
         store.dispatch({ 

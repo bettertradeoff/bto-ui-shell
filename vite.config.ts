@@ -28,12 +28,13 @@ export default defineConfig({
         const middleware = async (req: Request, res: Response, next: NextFunction) => {
           if (req.url.includes('/config.json')) {
             const stores = await readdir('../bto-ui-store/src')
+            const excludes = ['types', 'index.ts']
             return res.end(JSON.stringify({  
               "routes": [
                 { "path": "/", "component": resolve('../bto-ui-products/src/main')  }
               ],
               "stores": stores
-                .filter(store => (!store.includes('types')))
+                .filter(store => (!excludes.includes(store)))
                 .map(store => ({ 
                   "id": store.toUpperCase(), 
                   "module": resolve(`../bto-ui-store/src/${store}/src/index`)
