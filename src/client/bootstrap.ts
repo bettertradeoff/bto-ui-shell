@@ -1,7 +1,7 @@
 import type { RouteRecordRaw } from 'vue-router'
 
 import { createStore, Reducer, AnyAction, Store, applyMiddleware } from 'redux'
-import { createComponent, addToStore, Action  } from 'core'
+import { createComponent, addToStore, Action  } from '@bto-ui/shared'
 
 export interface Menu {
   text?: string

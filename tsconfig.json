@@ -10,7 +10,8 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "paths": {
-      "core": [ "./packages/core/src/index.ts" ]
+      "@bto-ui/shared": [ "../bto-ui-shared/src" ],
+      "@bto-ui-store/types": [ "../bto-ui-store/src/types/src" ]
     }
   }
 }

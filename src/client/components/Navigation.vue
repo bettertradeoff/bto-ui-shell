@@ -15,8 +15,9 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { useStore } from 'core'
-import { CartState, STORES } from 'types'
+
+import { useStore } from '@bto-ui/shared'
+import { CartState, STORES } from '@bto-ui-store/types'
 
 export default defineComponent({
   name: 'Navigation',

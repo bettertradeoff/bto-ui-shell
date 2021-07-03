@@ -3,7 +3,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 
-import { koala } from 'core'
+import { koala } from '@bto-ui/shared'
 import bootstrap, { BootstrapState } from './bootstrap'
 
 (async function () {
